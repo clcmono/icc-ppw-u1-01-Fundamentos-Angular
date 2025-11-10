@@ -24,8 +24,8 @@ export class PerfilPage {
     this.age.set(18);
   }
   changeData() {
-    this.name.set('Jeon');
-    this.lastName.set('Jungkook');
+    this.name.set('Jungkook');
+    this.lastName.set('Jeon');
     this.age.set(28);
   }
 

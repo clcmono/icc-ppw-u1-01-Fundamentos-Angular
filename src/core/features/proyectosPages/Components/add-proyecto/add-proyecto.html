@@ -1,0 +1,19 @@
+<h3>Agregar Proyecto</h3>
+    <h4>Proyecto a agregar {{ name() }}</h4>
+    <input
+      type="text"
+      name="Nombre del proyectos"
+      [value]="name()"
+      (change)="changeName(txtName.value)"
+      #txtName
+    />
+    <input
+      type="text"
+      name="Descripcion del proyectos"
+      [value]="description()"
+      (change)="changeDescription(txtDescrip.value)"
+      #txtDescrip 
+    />
+
+    <button (click)="addValue()">Agregar</button>
+  
