@@ -11,6 +11,11 @@ export class AddProyecto {
   description = signal('');
 
   newProyecto= output<Proyecto>();
+  removeProyecto= output<number>();
+
+  dellProyecto(id: number){
+    this.removeProyecto.emit(id);
+  }
  
  
   addValue() {
@@ -31,6 +36,8 @@ export class AddProyecto {
   changeDescription(value:string){
     this.description.set(value);
   }
+
+  
    
 
 }

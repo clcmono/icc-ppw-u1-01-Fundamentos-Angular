@@ -3,4 +3,8 @@ listName ="Listado de proyectos"
 [proyectos]=" proyectosService.proyectos()"
 ></listado-proyectos>
 
-<app-add-proyecto (newProyecto)="proyectosService.addProyectos($event)"></app-add-proyecto>
+<app-add-proyecto
+ (newProyecto)="proyectosService.addProyectos($event)"
+ (removeProyecto)="proyectosService.delFirstProyecto()"
+ 
+ ></app-add-proyecto>
