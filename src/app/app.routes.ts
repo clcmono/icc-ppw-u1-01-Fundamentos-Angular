@@ -3,7 +3,7 @@ import { PerfilPage } from '../core/features/perfilPage/perfilPage';
 import { HomePage } from '../core/features/homePage/homePage';
 import { ProyectoDosPages } from '../core/features/proyectoDosPages/proyectoDosPages';
 import { ProyectosPage } from '../core/features/proyectosPages/proyectosPages';
-import { FormulariosPage } from '../core/features/formulariosPage/formulariosPage';
+import { FormulariosPage } from '../core/features/formularios/pages/formulariosPage/formulariosPage';
 
 
 export const routes: Routes = [
@@ -23,12 +23,13 @@ export const routes: Routes = [
         path: "proyectoPages",
         component : ProyectosPage
     },
-     {
-        path: "formulariosPage",
-        component : FormulariosPage
+   
+  {
+        path: 'formulario',
+         loadChildren: () =>
+        import('../core/features/formularios/formularios-router')
+        .then(m => m.formulariosRoutes),
     },
-
-
 
    
 ];
